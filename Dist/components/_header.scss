@@ -1,11 +1,9 @@
-.body{
-    background-color: $clr-fwhite;
-}
-.header{
+    .header{
     background: $clr-primary;
     position: relative;
     position: fixed;    
     width: 100%;
+    z-index: 999;
     
     .container{
     transition: 2s ease;
@@ -15,14 +13,38 @@
         .container{
             background: $clr-light;
             border-radius: 3rem;
-            margin-top: 2.5rem;
+            margin-top: .5rem;
             transition: .3s ease;
             border: 1px solid $clr-primary;
-
-            .brandin{
+            h3{
                 color: $clr-dark;
             }
         }
+        .branding{
+            ul{
+                
+                li{
+                    
+                    a{
+                        color: $clr-dark;
+                        i{
+                            color: $clr-dark;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .header__actions{
+            a{
+                color: $clr-dark;
+                i{
+                    color: $clr-dark; 
+                }
+            }
+        }
+       
+       
     }
 
     &__wrapper{
@@ -76,7 +98,7 @@
 
                     i{
                         color: $clr-dark;
-                        transition: .3s ease;
+                        transition: .5s ease;
                         &.open{
                             transform: rotate(90deg);
                             transition:.5s ease;
@@ -145,7 +167,7 @@
                 background-color: $clr-light;
                 display: block;
                 border-radius: 5rem;
-                transition:.5s ease;
+                transition: transform 750ms ease-in-out 0s;
                 &:nth-child(2){
                     margin: .3rem 0;
                 }
@@ -154,7 +176,7 @@
                 span{
                     font-size: 1rem;
                     background-color: $clr-dark;
-                    transition:.5s ease;
+                    transition: transform 750ms ease-in-out 0s;
                     &:first-child{
                         transform: translateY(10px) rotate(225deg);
                         transition:.5s ease;
@@ -183,7 +205,7 @@
                 gap: 2rem;
                 margin-left: 2.5rem;
                 li{
-                    transition: .5 ease;
+                    transition: transform 750ms ease-in-out 0s;
                     a{
                         color: $clr-light;
                         font-weight: 600;
@@ -197,7 +219,7 @@
                     }
                     &:hover{
                         transform: scale(1.1);
-                        transition: .5 ease;
+                        transition: transform 750ms ease-in-out 0s;
                     }
                 }
             }
