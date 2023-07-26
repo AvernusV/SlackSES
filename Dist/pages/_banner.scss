@@ -25,6 +25,14 @@
                 margin: 2rem;
                 padding-bottom: 3rem;
             }
+            p1{
+                color: clear;
+                font-size: 0;
+                font-weight: 0;
+                text-align: left;
+                margin: 1rem;
+                padding-bottom: 3rem;
+            }
             
             .class__nav__btn{
                 flex-direction: column;
@@ -38,19 +46,19 @@
             .btn1{
                 display: flex;
                 align-items: center;
-                width: 100%;
+                height: 3.4rem;
                 margin-bottom: .4rem;
-                border-radius: 0;
                 font-size: 1rem;
                 font-weight: 600;
                 justify-content: center;
                 position: relative;
                 img{
                    
-                    max-width: 2rem;
+                    max-width: 3.2rem;
                     @include imgFit(100%, 100%);
                     position: absolute;
                     left: 0rem;
+                    border-radius: 0.2rem;
                 }
             }   
            
@@ -63,9 +71,215 @@
         }
 
     }
+
 }  
 
 .trust{
-    
+    display: flex;
+    align-items: center;
+    background: $clr-fwhite;
+    h3{
+        padding-top: 1rem;
+        font-size: 1rem;
+        font-weight: 550;
+        text-align: center;
+    }
+    &__logos{
+        padding-top: 2rem;
+        gap: 1.2rem;
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: .5rem;
+        flex-wrap: wrap;
+        align-items: center;
+
+        #airb{
+            max-width: 5rem;
+        }
+        #nasa{
+            max-width: 5rem;
+        }
+        #uber{
+            max-width: 7rem;
+            height: 2rem;
+        }
+        #targ{
+            max-width: 5rem;
+        }
+        #newt{
+            max-width: 20rem;
+        }
+        #etsy{
+            max-width: 5rem;
+        }
+
+    }
 }
 
+.trust__cond{
+    background: $clr-fwhite;
+    display: columns;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .cond__wrapper{
+        .cond__item{
+            &:nth-child(odd){
+                video{
+                    max-width: 28.8rem;
+                    transform: translateX(-2rem);
+                }
+            }
+            &:nth-child(even){
+                video{
+                    max-width: 28.8rem;
+                    transform: translateX(.1drem);
+                }
+            }
+        }
+        h3{
+         display: flex; 
+         padding-top: 1rem;  
+         color: $clr-dark;
+        }
+        p{
+         display: flex;
+         text-align: justify;
+         color: $clr-dark;
+         padding-top: 1rem;
+         font-size: 1rem;
+         font-weight: 540;
+         letter-spacing: normal;
+
+        }
+        a{
+         display: flex;
+         text-align: justify;
+         font-size: 1rem;
+         font-weight: 400; 
+         padding-top: .8rem;
+         color: $clr-gblue; 
+        }
+        i{
+            display: flex;
+            align-items: center;
+            padding-left: .3rem;
+            padding-right: .3rem;
+        }
+        .cond__text{
+            padding-bottom: 5rem;
+        }
+
+
+    }
+}
+
+
+
+
+
+@include mediaQuery($break-lg){
+
+    .banner{
+        height:55vh;
+        padding-top: 5rem;
+        h1{
+            color: $clr-light;
+            text-align: left;
+            font-size: 4.2rem;
+            span{
+                color: $clr-yellow;
+            }
+         }
+            p{
+                color: $clr-light;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-align: left;
+                margin: 1rem;
+                padding-bottom: 3rem;
+            }
+            p1{
+                color: $clr-light;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-align: left;
+                margin: 1rem;
+                padding-bottom: 3rem;
+            }
+        &__wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+
+            video{
+                padding-left: 2rem;
+                position: unset;
+                @include imgFit(100%, 100%);
+            }
+        }
+        
+        ul{
+            display: flex;
+            gap: 1rem;
+            width: 20rem;
+            height: 3.5rem;
+        }
+        .btn1{
+            width: 20rem;
+            height: 3.5rem;
+            display: flex;
+            img{
+                max-width: 3.5rem;
+                    @include imgFit(100%, 100%);
+                    position: absolute;
+                    left: 0rem;
+                    border-radius: 0.2rem;
+
+            }
+            
+        }   
+
+    }
+    
+    .trust{
+        display: flex;
+        align-items: center;
+        background: $clr-fwhite;
+        h3{
+            padding-top: 1rem;
+            font-size: 1rem;
+            font-weight: 550;
+            text-align: center;
+        }
+        &__logos{
+            padding-top: 2rem;
+            gap: 4rem;
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: .5rem;
+            flex-wrap: wrap;
+            align-items: center;
+    
+            #airb{
+                max-width: 5rem;
+            }
+            #nasa{
+                max-width: 5rem;
+            }
+            #uber{
+                max-width: 7rem;
+                height: 2rem;
+            }
+            #targ{
+                max-width: 5rem;
+            }
+            #newt{
+                max-width: 20rem;
+            }
+            #etsy{
+                max-width: 5rem;
+            }
+    
+        }
+        
+    }
+}

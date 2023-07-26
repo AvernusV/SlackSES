@@ -80,12 +80,14 @@
     font-weight: 500;
     position: relative;
     transition: .5s ease;
+    border-radius: 0.5rem;
 
     &.bg{
         &--google{
             background: $clr-gblue;
             color: $clr-light;
             transition: .5s ease;
+            border-radius: 0.2rem;
             
 
             &::before{
@@ -100,6 +102,7 @@
                 left: 0;
                 z-index: -1;
                 transition: .5s ease;
+                border-radius: 0.2rem;
             }
             &:hover::before{
                 width: 100%;
@@ -116,6 +119,7 @@
             background: $clr-light;
             color: $clr-primary;
             border: 1px solid $clr-primary;
+            border-radius: 0.2rem;
 
             &::before{
                 content: "";
@@ -129,6 +133,7 @@
                 left: 0;
                 z-index: -1;
                 transition: .5s ease;
+                border-radius: 0.2rem;
             }
             &:hover::before{
                 width: 100%;

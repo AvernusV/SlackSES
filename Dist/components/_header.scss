@@ -14,8 +14,7 @@
             background: $clr-light;
             border-radius: 3rem;
             margin-top: .5rem;
-            transition: .3s ease;
-            border: 1px solid $clr-primary;
+            transition: .3s ease;   
             h3{
                 color: $clr-dark;
             }
@@ -43,8 +42,13 @@
                 }
             }
         }
-       
-       
+        &__actions{
+            .toggle__menu{
+                span{
+                    color: $clr-dark;
+                }
+            }
+        }
     }
 
     &__wrapper{

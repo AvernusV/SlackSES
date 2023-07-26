@@ -48,7 +48,6 @@ body {
   border-radius: 3rem;
   margin-top: 0.5rem;
   transition: 0.3s ease;
-  border: 1px solid hsl(294, 54%, 27%);
 }
 .header.white .container h3 {
   color: hsl(0, 0%, 0%);
@@ -63,6 +62,9 @@ body {
   color: hsl(0, 0%, 0%);
 }
 .header.white .header__actions a i {
+  color: hsl(0, 0%, 0%);
+}
+.header.white__actions .toggle__menu span {
   color: hsl(0, 0%, 0%);
 }
 .header__wrapper {
@@ -319,11 +321,13 @@ body {
   font-weight: 500;
   position: relative;
   transition: 0.5s ease;
+  border-radius: 0.5rem;
 }
 .btn1.bg--google {
   background: hsl(217, 89%, 61%);
   color: hsl(0, 0%, 100%);
   transition: 0.5s ease;
+  border-radius: 0.2rem;
 }
 .btn1.bg--google::before {
   content: "";
@@ -337,6 +341,7 @@ body {
   left: 0;
   z-index: -1;
   transition: 0.5s ease;
+  border-radius: 0.2rem;
 }
 .btn1.bg--google:hover::before {
   width: 100%;
@@ -352,6 +357,7 @@ body {
   background: hsl(0, 0%, 100%);
   color: hsl(294, 54%, 27%);
   border: 1px solid hsl(294, 54%, 27%);
+  border-radius: 0.2rem;
 }
 .btn1.bg--email::before {
   content: "";
@@ -365,6 +371,7 @@ body {
   left: 0;
   z-index: -1;
   transition: 0.5s ease;
+  border-radius: 0.2rem;
 }
 .btn1.bg--email:hover::before {
   width: 100%;
@@ -406,6 +413,14 @@ body {
   margin: 2rem;
   padding-bottom: 3rem;
 }
+.banner__wrapper p1 {
+  color: clear;
+  font-size: 0;
+  font-weight: 0;
+  text-align: left;
+  margin: 1rem;
+  padding-bottom: 3rem;
+}
 .banner__wrapper .class__nav__btn {
   flex-direction: column;
   text-align: center;
@@ -417,22 +432,22 @@ body {
 .banner__wrapper .btn1 {
   display: flex;
   align-items: center;
-  width: 100%;
+  height: 3.4rem;
   margin-bottom: 0.4rem;
-  border-radius: 0;
   font-size: 1rem;
   font-weight: 600;
   justify-content: center;
   position: relative;
 }
 .banner__wrapper .btn1 img {
-  max-width: 2rem;
+  max-width: 3.2rem;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   left: 0rem;
+  border-radius: 0.2rem;
 }
 .banner__wrapper Video {
   position: absolute;
@@ -442,4 +457,192 @@ body {
   height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.trust {
+  display: flex;
+  align-items: center;
+  background: hsl(34, 42%, 93%);
+}
+.trust h3 {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+}
+.trust__logos {
+  padding-top: 2rem;
+  gap: 1.2rem;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.trust__logos #airb {
+  max-width: 5rem;
+}
+.trust__logos #nasa {
+  max-width: 5rem;
+}
+.trust__logos #uber {
+  max-width: 7rem;
+  height: 2rem;
+}
+.trust__logos #targ {
+  max-width: 5rem;
+}
+.trust__logos #newt {
+  max-width: 20rem;
+}
+.trust__logos #etsy {
+  max-width: 5rem;
+}
+
+.trust__cond {
+  background: hsl(34, 42%, 93%);
+  display: columns;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.trust__cond .cond__wrapper .cond__item:nth-child(odd) video {
+  max-width: 28.8rem;
+  transform: translateX(-2rem);
+}
+.trust__cond .cond__wrapper .cond__item:nth-child(even) video {
+  max-width: 28.8rem;
+  transform: translateX(0.1drem);
+}
+.trust__cond .cond__wrapper h3 {
+  display: flex;
+  padding-top: 1rem;
+  color: hsl(0, 0%, 0%);
+}
+.trust__cond .cond__wrapper p {
+  display: flex;
+  text-align: justify;
+  color: hsl(0, 0%, 0%);
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 540;
+  letter-spacing: normal;
+}
+.trust__cond .cond__wrapper a {
+  display: flex;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 0.8rem;
+  color: hsl(217, 89%, 61%);
+}
+.trust__cond .cond__wrapper i {
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+.trust__cond .cond__wrapper .cond__text {
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 940px) {
+  .banner {
+    height: 55vh;
+    padding-top: 5rem;
+  }
+  .banner h1 {
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    font-size: 4.2rem;
+  }
+  .banner h1 span {
+    color: hsl(42, 83%, 55%);
+  }
+  .banner p {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 1rem;
+    padding-bottom: 3rem;
+  }
+  .banner p1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 1rem;
+    padding-bottom: 3rem;
+  }
+  .banner__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner__wrapper video {
+    padding-left: 2rem;
+    position: unset;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .banner ul {
+    display: flex;
+    gap: 1rem;
+    width: 20rem;
+    height: 3.5rem;
+  }
+  .banner .btn1 {
+    width: 20rem;
+    height: 3.5rem;
+    display: flex;
+  }
+  .banner .btn1 img {
+    max-width: 3.5rem;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    left: 0rem;
+    border-radius: 0.2rem;
+  }
+  .trust {
+    display: flex;
+    align-items: center;
+    background: hsl(34, 42%, 93%);
+  }
+  .trust h3 {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 550;
+    text-align: center;
+  }
+  .trust__logos {
+    padding-top: 2rem;
+    gap: 4rem;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .trust__logos #airb {
+    max-width: 5rem;
+  }
+  .trust__logos #nasa {
+    max-width: 5rem;
+  }
+  .trust__logos #uber {
+    max-width: 7rem;
+    height: 2rem;
+  }
+  .trust__logos #targ {
+    max-width: 5rem;
+  }
+  .trust__logos #newt {
+    max-width: 20rem;
+  }
+  .trust__logos #etsy {
+    max-width: 5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
