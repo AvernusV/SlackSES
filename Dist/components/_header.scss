@@ -12,13 +12,13 @@
         background: transparent;    
         .container{
             background: $clr-light;
-            border-radius: 3rem;
-            margin-top: .5rem;
-            transition: .3s ease;   
+            border-radius: 0rem;
+            margin-top: 0rem;
+            transition: .5s ease;   
             h3{
                 color: $clr-dark;
             }
-        }
+        }   
         .branding{
             ul{
                 
@@ -35,18 +35,19 @@
             }
         }
         .header__actions{
+
             a{
-                color: $clr-dark;
                 i{
+                    color: $clr-dark; 
+                }
+                &.sign{
                     color: $clr-dark; 
                 }
             }
         }
-        &__actions{
-            .toggle__menu{
-                span{
-                    color: $clr-dark;
-                }
+        .toggle__menu{
+            span{
+                background-color: $clr-dark;
             }
         }
     }
@@ -102,10 +103,11 @@
 
                     i{
                         color: $clr-dark;
-                        transition: .5s ease;
+                        transition: .1s ease;
                         &.open{
                             transform: rotate(90deg);
-                            transition:.5s ease;
+                            transition:.1s ease;
+
                         }
                     }
 
@@ -140,8 +142,9 @@
                 padding: 1.5rem;
                 bottom: 1.5rem;
                 a{
-                    color: $clr-dark;
+                    color: $clr-light;
                     font-size: 1rem;
+                    font-weight: bold;
                 }
             }
     }
@@ -165,10 +168,12 @@
         .toggle__menu{
             z-index: 999;
             transition:.3s ease;
+            color: $clr-dark;
             span{
                 width:2rem;
                 height:.2rem;
                 background-color: $clr-light;
+                color: $clr-dark;
                 display: block;
                 border-radius: 5rem;
                 transition: transform 750ms ease-in-out 0s;
@@ -180,6 +185,7 @@
                 span{
                     font-size: 1rem;
                     background-color: $clr-dark;
+                    color: $clr-dark;
                     transition: transform 750ms ease-in-out 0s;
                     &:first-child{
                         transform: translateY(10px) rotate(225deg);
@@ -187,10 +193,12 @@
                     }
                     &:nth-child(2){
                         opacity:0;
+                        color: $clr-dark;
                     }
                     &:last-child{
                         transform: translateY(-5px) rotate(-225deg);
                         transition:.5s ease;
+                        color: $clr-dark;
                     }
                 }
             }
@@ -199,10 +207,40 @@
             display: none;
         }
     }
-    @include mediaQuery($break-lg){
+
+@include mediaQuery($break-lg){
         &__nav{
             display: none;
         }
+
+        &.white{
+            background: transparent;    
+            .container{
+                background: $clr-light;
+                border-radius: 3rem;
+                margin-top: .5rem;
+                transition: .3s ease;   
+                h3{
+                    color: $clr-dark;
+                }
+            }   
+            .header__actions{
+                a{
+                    
+                    &.sign{
+                        color: $clr-dark; 
+                    }
+                }
+            }
+            &__actions{
+                .toggle__menu{
+                    span{
+                        color: $clr-dark;
+                    }
+                }
+            }
+        }
+
         .branding{
             ul{
                 display: flex;
@@ -237,10 +275,11 @@
                 align-items: center;
                 gap: 1rem;
                 a{
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
+                    font-weight: bold;
                 }
                 a.sign{
-                    color:$clr-light
+                    color:$clr-light;
                 }
 
             }

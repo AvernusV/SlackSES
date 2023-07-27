@@ -1,0 +1,82 @@
+$colors:(
+    'primary':$clr-primary,
+    'light':$clr-light,
+    'fwhite':$clr-fwhite,
+    'dark':$clr-dark,
+    'yellow':$clr-yellow,
+    'gblue':$clr-gblue,
+);
+@each $key, $val in $colors{
+    .text{
+        &--#{$key}{
+            color:$val;
+        }
+    }
+
+    .bg{
+        &--#{$key}{
+            background:$val;
+        }
+    }
+};
+
+$displays: none, block, flex, inline-block;
+@each $display in $displays{
+    .d{
+        &--#{$display}{
+        display:$display;
+        }
+    }
+};
+
+$margins: top, bottom;
+@for $i from 0 through 20{
+    .my{
+        &--#{$i}{
+        margin:$i+rem 0;
+        }
+    }
+};
+
+$margins: left, right;
+@for $i from 0 through 20{
+    .mx{
+        &--#{$i}{
+            margin:0 $i+rem;
+        }
+    }
+};
+$margins: left, right, top, right;
+@for $i from 0 through 20{
+    .m{
+        &--#{$i}{
+        margin:$i+rem;
+        }
+    }  
+};
+
+$paddings: top, bottom;
+@for $i from 0 through 20{
+    .py{
+        &--#{$i}{
+        padding:$i+rem 0;
+        }
+    }
+};
+$paddings: left, right;
+@for $i from 0 through 20{
+    .px{
+        &--#{$i}{
+        padding:0 $i+rem ;
+        }
+    }
+};
+$paddings: left, right;
+@for $i from 0 through 20{
+    .p{
+        &--#{$i}{
+        padding:$i+rem;
+        }
+    }
+};
+

@@ -1,3 +1,5 @@
 {
-    "editor.fontVariations": false
+    "editor.fontVariations": false,
+    "prettier.configPath": "",
+    "prettier.enableDebugLogs": true
 }

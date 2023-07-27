@@ -1,19 +1,18 @@
 .banner{
     display: flex;
     background: $clr-primary;
-    padding-top: 4rem;
-    height: 90vh;
     position: relative;
+    z-index: 1;
+
  &__wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        padding: .5rem;
-        flex-wrap: wrap;
+        flex-wrap: wrap;                                                                                                                                                                                                                                                                                              
 
         h1{
             color: $clr-light;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             span{
                 color: $clr-yellow;
             }
@@ -21,9 +20,10 @@
             p{
                 color: $clr-light;
                 font-size: 1rem;
+                font-weight: bold;
                 text-align: center;
                 margin: 2rem;
-                padding-bottom: 3rem;
+                padding-bottom: 0.1rem;
             }
             p1{
                 color: clear;
@@ -31,14 +31,13 @@
                 font-weight: 0;
                 text-align: left;
                 margin: 1rem;
-                padding-bottom: 3rem;
             }
             
             .class__nav__btn{
                 flex-direction: column;
                 text-align: center;
                 gap: 1rem;
-                width:100%;
+                width:140%;
                 padding: 2rem;
                 bottom: 3rem;
                 
@@ -54,11 +53,11 @@
                 position: relative;
                 img{
                    
-                    max-width: 3.2rem;
+                    max-width: 3.5rem;
                     @include imgFit(100%, 100%);
                     position: absolute;
                     left: 0rem;
-                    border-radius: 0.2rem;
+                    border-radius: 0.4rem;
                 }
             }   
            
@@ -67,7 +66,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                @include imgFit(100%, 20rem);
+                @include imgFit(100%, 20.8rem);
         }
 
     }
@@ -76,12 +75,12 @@
 
 .trust{
     display: flex;
-    align-items: center;
     background: $clr-fwhite;
+    z-index: 2;
     h3{
         padding-top: 1rem;
         font-size: 1rem;
-        font-weight: 550;
+        font-weight: bold;
         text-align: center;
     }
     &__logos{
@@ -107,7 +106,7 @@
             max-width: 5rem;
         }
         #newt{
-            max-width: 20rem;
+            max-width: 18rem;
         }
         #etsy{
             max-width: 5rem;
@@ -118,26 +117,45 @@
 
 .trust__cond{
     background: $clr-fwhite;
-    display: columns;
+    display: column;
     grid-template-columns: 1fr 1fr 1fr;
 
     .cond__wrapper{
         .cond__item{
             &:nth-child(odd){
-                video{
-                    max-width: 28.8rem;
-                    transform: translateX(-2rem);
+                #headm{
+                    display: column;
+                    max-width: 30.5rem;
+                    transform: translateX(-1.3rem);
                 }
             }
             &:nth-child(even){
-                video{
-                    max-width: 28.8rem;
-                    transform: translateX(.1drem);
+                #headm{
+                    display: column;
+                    max-width: 30.5rem;
+                    transform: translateX(-1.2rem);
+                }
+            }
+
+            &:nth-child(odd){
+                #headd{
+                    display: none;
+                    max-width: 26rem;
+                    transform: translateX(-1.3rem);
+                }
+            }
+            &:nth-child(even){
+                #headd{
+                    display: none;
+                    max-width: 26rem;
+                    transform: translateX(0.6rem);
                 }
             }
         }
         h3{
          display: flex; 
+         font-size: 2.2rem;
+         font-weight: bold;
          padding-top: 1rem;  
          color: $clr-dark;
         }
@@ -147,7 +165,7 @@
          color: $clr-dark;
          padding-top: 1rem;
          font-size: 1rem;
-         font-weight: 540;
+         font-weight: bold;
          letter-spacing: normal;
 
         }
@@ -155,9 +173,13 @@
          display: flex;
          text-align: justify;
          font-size: 1rem;
-         font-weight: 400; 
+         font-weight: bold; 
          padding-top: .8rem;
          color: $clr-gblue; 
+        }
+        a:hover{
+            text-decoration: underline;
+            transition: .5s ease;
         }
         i{
             display: flex;
@@ -173,6 +195,29 @@
     }
 }
 
+.teams{
+    background: $clr-light;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    .container{
+    
+        &__wrapper{   
+            
+
+            &__item{
+
+                &__text{
+                    
+                    &__actions__btn{  
+                
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -232,7 +277,7 @@
                     @include imgFit(100%, 100%);
                     position: absolute;
                     left: 0rem;
-                    border-radius: 0.2rem;
+                    border-radius: 0.5rem;
 
             }
             
@@ -247,12 +292,12 @@
         h3{
             padding-top: 1rem;
             font-size: 1rem;
-            font-weight: 550;
+            font-weight: bold;
             text-align: center;
         }
         &__logos{
             padding-top: 2rem;
-            gap: 4rem;
+            gap: 5rem;
             display: flex;
             grid-template-columns: 1fr 1fr 1fr;
             padding: .5rem;
@@ -279,7 +324,82 @@
                 max-width: 5rem;
             }
     
-        }
+            }
+            
+    
         
+    }
+    .trust__cond{
+        display: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        .container{
+            .cond__item{
+                display:flex;
+                .cond__text{
+                    max-width: 35rem;
+                    padding-top: 5rem;
+                    padding-bottom: 5rem;
+                    margin-left: 10rem;
+                    h3{
+                        font-size: 3rem;
+                    }
+                    p{
+    
+                    }
+                    a{
+    
+                    }
+                }
+            }
+            .cond__item{
+                display: flex;
+                align-items: center;
+                padding-top: 5rem;
+                &:nth-child(even){
+                   .cond__text{
+                    order: (-1);
+                    margin-left: 0rem;
+                   }
+                   #headd{
+                    margin-left: 10rem;
+                   }
+                }
+                &:nth-child(odd){
+                    #headm{
+                        display: none;
+                        position: unset;
+                        max-width: 35rem;
+                        transform: translateX(-1.3rem);
+                    }
+                }
+                &:nth-child(even){
+                    #headm{
+                        display: none;
+                        position: unset;
+                        max-width: 35rem;
+                        transform: translateX(0.6rem);
+                    }
+                }
+
+                &:nth-child(odd){
+                    #headd{
+                        display: flex;
+                        position: unset;
+                        max-width: 40rem;
+                        transform: translateX(-1.3rem);
+                    }
+                }
+                &:nth-child(even){
+                    #headd{
+                        display: flex;
+                        position: unset;
+                        max-width: 40rem;
+                        transform: translateX(0.6rem);
+                    }
+                    
+                }
+            }
+            
+        }
     }
 }
