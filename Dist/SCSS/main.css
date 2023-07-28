@@ -718,8 +718,9 @@ body {
   bottom: 1.5rem;
 }
 .header__nav__btn a {
+  padding: 1rem;
   color: hsl(0, 0%, 100%);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 .header__nav.open {
@@ -828,8 +829,8 @@ body {
     gap: 1rem;
   }
   .header__actions__btn a {
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 1.1rem;
+    font-size: 0.7rem;
   }
   .header__actions__btn a.sign {
     color: hsl(0, 0%, 100%);
@@ -839,8 +840,9 @@ body {
 .btn {
   display: inline-block;
   padding: 0.5rem;
-  border: 1px solid transparent;
+  border: 10px solid transparent;
   color: hsl(0, 0%, 0%);
+  font-size: 1rem;
   font-weight: 500;
   position: relative;
   border-radius: 1rem;
@@ -983,11 +985,44 @@ body {
   border-radius: 0.4rem;
 }
 
+.footer__left {
+  color: hsl(0, 0%, 0%);
+}
+.footer__left ul li {
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  font-weight: bold;
+}
+.footer .modal {
+  padding: 2rem;
+  overflow-y: auto;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: yellow;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.footer .modal.active {
+  display: block;
+}
+.footer .modal button {
+  float: right;
+  background: transparent;
+  border: 0 solid transparent;
+  font-size: 2rem;
+}
+
 /*PAGESSITE*/
 .banner {
   display: flex;
   background: hsl(300, 60%, 21%);
   position: relative;
+  height: 80vh;
   z-index: 1;
 }
 .banner__wrapper {
@@ -1161,11 +1196,50 @@ body {
 
 .teams {
   background: hsl(0, 0%, 100%);
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   align-items: center;
   text-align: center;
 }
+.teams__text h1 {
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+.teams__text p {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.teams span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: hsl(300, 62%, 15%);
+}
+.teams li {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 2rem;
+}
+.teams li p {
+  font-size: 0.8rem;
+  max-width: 10rem;
+  margin: 0 auto;
+}
+.teams__actions__btn {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  bottom: 1.5rem;
+}
+.teams__actions__btn a {
+  padding: 1rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 940px) {
   .banner {
     height: 55vh;
@@ -1318,5 +1392,47 @@ body {
     position: unset;
     max-width: 40rem;
     transform: translateX(0.6rem);
+  }
+  .teams {
+    background: hsl(0, 0%, 100%);
+  }
+  .teams__text {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  .teams__text h1 {
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+  .teams__text p {
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .teams li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+  .teams li p {
+    font-size: 0.8rem;
+    max-width: 10rem;
+    margin: 0 auto;
+  }
+  .teams__actions__btn {
+    display: flex;
+    flex-direction: unsetn;
+    text-align: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1.5rem;
+    bottom: 1.5rem;
+  }
+  .teams__actions__btn a {
+    padding: 1rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+    font-weight: bold;
   }
 }/*# sourceMappingURL=main.css.map */
