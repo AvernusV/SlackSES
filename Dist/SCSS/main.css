@@ -985,13 +985,22 @@ body {
   border-radius: 0.4rem;
 }
 
+.footer {
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+}
 .footer__left {
-  color: hsl(0, 0%, 0%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .footer__left ul li {
-  font-size: 1.4rem;
-  padding: 2rem 0;
+  font-size: 0.9rem;
   font-weight: bold;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+.footer__left ul li a {
+  color: hsl(0, 0%, 0%);
 }
 .footer .modal {
   padding: 2rem;
@@ -1000,7 +1009,7 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: yellow;
+  background: hsl(34, 42%, 93%);
   top: auto;
   left: 0;
   right: 0;
@@ -1014,7 +1023,72 @@ body {
   float: right;
   background: transparent;
   border: 0 solid transparent;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+.footer .modal h2 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 940px) {
+  .footer .modal {
+    border: 1px solid hsl(300, 62%, 15%);
+    max-width: 72rem;
+    height: auto;
+    margin: 0 auto;
+    bottom: 8rem;
+  }
+}
+.footer .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+.footer .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.footer .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: rgb(76, 114, 185);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.footer .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  right: 0.3em;
+  bottom: 0.3em;
+  transform: translateX(150%);
+  background-color: #07549c;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.footer .slider:after {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: #cccccc;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.footer .switch input:focus + .slider {
+  box-shadow: 0 0 1px #59d102;
+}
+.footer .switch input:checked + .slider:before {
+  transform: translateY(0);
+}
+.footer .switch input:checked + .slider::after {
+  transform: translateX(-150%);
 }
 
 /*PAGESSITE*/
@@ -1396,11 +1470,6 @@ body {
   .teams {
     background: hsl(0, 0%, 100%);
   }
-  .teams__text {
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  }
   .teams__text h1 {
     padding-top: 2rem;
     font-size: 2rem;
@@ -1411,8 +1480,9 @@ body {
     font-weight: 500;
   }
   .teams li {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
     padding-top: 2rem;
   }
   .teams li p {
