@@ -2,13 +2,14 @@
     display: flex;
     background: $clr-primary;
     position: relative;
-    height: 80vh;
+    height: 84vh;
     z-index: 1;
 
  &__wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        flex-wrap: wrap;                                                                                                                                                                                                                                                                                              
+        flex-wrap: wrap;
+        padding-top: 4rem;                                                                                                                                                                                                                                                                                           
 
         h1{
             color: $clr-light;
@@ -242,6 +243,14 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
+    }
+    video{
+        @include imgFit(100%, 100%);
+        position: unset;
+        transform: translateX(-1.2rem);
+        border-top-right-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+        
     }
     
 }
