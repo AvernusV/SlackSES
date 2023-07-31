@@ -1,6 +1,5 @@
     .header{
     background: $clr-primary;
-    position: relative;
     position: fixed;    
     width: 100%;
     z-index: 999;
@@ -190,7 +189,7 @@
                     transition: transform 750ms ease-in-out 0s;
                     &:first-child{
                         transform: translateY(10px) rotate(225deg);
-                        transition:.5s ease;
+             v           transition:.5s ease;
                     }
                     &:nth-child(2){
                         opacity:0;

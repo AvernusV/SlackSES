@@ -6,8 +6,12 @@
     <title>Slack - Home</title>
     <link rel="stylesheet" href="./Dist/SCSS/main.css">
     <script src="https://kit.fontawesome.com/b6efeb8ed6.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  </head>
 <body>
+  <div id="overlay">
+
+  </div>
 <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -162,51 +166,145 @@
               <p>feel more connected to their teams*</p>
             </li>
           </ul> 
-          <div>
-         <video id="headd" src="./Dist/img/kamote4.mp4" autoplay loop></video>
-         </div>
         </div>
     </div>
   </div>
 </section>
 
+<section class="teams__head">
+<div class="contianer">
+  <div class="teams__wrapper">
+    <div class="teams__item">
+      <div>
+        <video id="headd" src="./Dist/img/kamote4.mp4" autoplay loop></video>
+        </div>
+      <div class="teams__text">
+        <h2>“Whether you’re a small or large organization, executing anything from a discrete modernization program to a digital transformation initiative, Slack is an incredibly powerful tool in the hybrid world.”</h2>
+        <p1>Jennifer Quinlan</p1>
+        <p>Managing Partner, IBM iX Americas Leader - Customer and Experience Transformation, IBM</p>
+        <a href="">See moer customer stories<i class="fa-solid fa-arrow-right"></i></a>
+        <p2>* Weighted average. Based on 2,707 survey responses from weekly Slack users in the U.S., UK, Australia and Canada with a ± 2% margin of error at 95% CI (December 2021).</p2>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<Section class="work">
+  <div class="contianer">
+    <div class="work__wrapper">
+        <h3>Take a deeper dive into a new way to work</h3>
+        <div class="slider">
+           <div class="card">
+            <div class="slider__item">
+              <img src="./Dist/img/promo-boost-productivity2x.jpg" alt="">
+              <div class="slider__content">
+                <h5>Customer Story</h5>
+                <h3>The next big thing.</h3>
+                <div class="slider__actions">
+                  <a href="">READ MORE</a>
+                  <i class=" fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+           </div>
+
+           <div class="card">
+            <div class="slider__item">
+              <img src="./Dist/img/promo-open-ai2x.jpg" alt="">
+              <div class="slider__content">
+                <h5>Customer Story</h5>
+                <h3>The next big thing.</h3>
+                <div class="slider__actions">
+                  <a href="">READ MORE</a>
+                  <i class=" fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+           </div>
+
+           <div class="card">
+            <div class="slider__item">
+              <img src="./Dist/img/promo-state-of-work.jpg" alt="">
+              <div class="slider__content">
+                <h5>Customer Story</h5>
+                <h3>The next big thing.</h3>
+                <div class="slider__actions">
+                  <a href="">READ MORE</a>
+                  <i class=" fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+           </div>
+
+           <div class="card">
+            <div class="slider__item">
+              <img src="./Dist/img/wtny-resource-tile2x.jpg" alt="">
+              <div class="slider__content">
+                <h5>Customer Story</h5>
+                <h3>The next big thing.</h3>
+                <div class="slider__actions">
+                  <a href="">READ MORE</a>
+                  <i class=" fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+           </div>
+          
+        </div>
+    </div>
+  </div>
+</Section>
 <footer class="footer">
-  <div class="container">
     <div class="footer__wrapper">
       <div class="footer__left">
         <ul>
-          <li><a href="">Status</a></li>
-          <li><a href="">Privacy</a></li>
-          <li><a href="">terms</a></li>
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span><li><a href="">Your Privacy Choices</a></li>
-          </label>
-          <li><a href="">Cookie Preferences</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li>
-            <a class="region" href="javascript:void(0)">Change Region</a>
+          <div class="regions">
+            <li><a href="">Status</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">terms</a></li>
+            <li><a href=""><i class="fa-solid fa-user-shield"></i> Your Privacy Choices</a></li>
+            <li><a href="">Cookie Preferences</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a class="region" href="javascript:void(0)"><i class="fa-solid fa-globe"></i> Change Region <i class="fa-solid fa-chevron-down"></i></a>
+          </div>
             <div class="modal" onfocusout="closeModelHandler">
-              <button id="closeModal" >X</button>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
-              <h2>Change Region</h2>
+              <button id="closeModal"><i class="fa-solid fa-xmark"></i></i></button>
+             <div class="modal__top">
+             <h1>Change Region</h1>
+             <p>Selecting a different region will change the language and content of slack.com.</p>
+             </div>
+             <div class="regions">
+             <ul class="footer__drop">
+              <span>AMERICAS</span>
+              <li><a href="">Latinoamérica (español)</a></li>
+              <li><a href="">Brasil (português)</a></li>
+              <li><a href="">United States (English)</a></li>
+            </ul>
+             <ul class="footer__drop">
+              <span>EUROPE</span>
+              <li><a href="">Deutschland (Deutsch)</a></li>
+              <li><a href="">España (español)</a></li>
+              <li><a href="">France (français)</a></li>
+              <li><a href="">Italia (italiano)</a></li>
+              <li><a href="">United Kingdom (English)</a></li>
+            </ul>
+             <ul class="footer__drop">
+              <span>ASIA PACIFIC</span>
+              <li><a href="">简体中文</a></li>
+              <li><a href="">繁體中文</a></li>
+              <li><a href="">India (English)</a></li>
+              <li><a href="">日本 (日本語)</a></li>
+              <li><a href="">대한민국 (한국어)</a></li>
+            </ul>
+          </div>
             </div>
           </li>
         </ul>
       </div>
     </div>
-  </div>
-</footer>
-
+</footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script src="./Dist/SCSS/Script.js"></script>
 </body>
 </html>

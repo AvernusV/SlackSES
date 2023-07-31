@@ -1,19 +1,21 @@
 .footer{
+  
     &__left{
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-        
-        ul{
-            li{
-                font-size: 0.9rem;
-                font-weight: bold;
-                padding: 1rem 0;
-                font-weight: bold;
-                a{
-                color: $clr-dark;
-                }
-            }
-        }
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;     
+      
+      }
+
+    .regions{
+    li{
+    padding:.8rem;  
     }
+    a{
+      font-size: .8rem;
+      font-weight: 800;
+      color: $clr-dark;
+    }
+    }
+
     .modal{
         padding: 2rem;
         overflow-y: auto;
@@ -39,16 +41,93 @@
         h2{
             font-size: 1rem;
         }
-    }
-    @include mediaQuery($break-lg){
-        .modal{
-            border: 1px solid $clr-dprimary;
-            max-width: 72rem;
-            height: auto;
+        #closeModal{
+          i{
+            font-size: 2rem;
+          }
+        }
+        .modal__top{
+          text-align: center;
+          h1{
+            font-size: 1rem;
+            font-weight: bold;
+          }
+          p{
+            font-size: .9rem;
+            font-weight: 500;
+            padding-top: .8rem;
+            max-width: 20rem;
             margin: 0 auto;
-            bottom: 8rem;
+          }
         }
     
+        .footer__drop{
+          padding-top: 2rem;
+          padding-left: 2rem;
+          span{
+            font-size: 1rem;
+            font-weight: bold;
+          }
+          li{
+            a{
+              font-size: .8rem;
+              font-weight: 500;
+            }
+          }
+        }
+        
+    }
+    
+    @include mediaQuery($break-lg){
+      .modal{
+        border: 1px solid $clr-dprimary;
+        max-width: 72rem;
+        height: auto;
+        margin: 0 auto;
+        bottom: 8rem;
+        padding: 2rem;
+        overflow-y: auto;
+        display: none;
+         background: $clr-fwhite;
+         z-index: 9999;
+         &.active{
+            display: block;
+         }
+        button{
+            float: right;
+            background: transparent;
+            border: 0 solid transparent;
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        h1{
+          padding-top: 1rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        p{
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        .regions{ 
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .footer__drop{
+            padding-top: 2rem;
+            li{
+              
+              a{
+                font-size: .9rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+    }
     }
     /* The switch - the box around the slider */
 .switch {
