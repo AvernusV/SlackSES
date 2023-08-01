@@ -1055,6 +1055,33 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
 }
+.footer .footer2nd__items {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.footer .footer2nd__items ul {
+  padding: 1rem;
+  justify-content: space-between;
+  color: hsl(0, 0%, 0%);
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+.footer .footer2nd__items a {
+  color: hsl(0, 0%, 0%);
+}
+.footer .footer2nd__text {
+  padding: 1rem;
+  height: auto;
+  text-align: left;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2857;
+  letter-spacing: normal;
+  font-size: 0.75rem;
+  color: #454245;
+}
 @media screen and (min-width: 940px) {
   .footer .modal {
     border: 1px solid hsl(300, 62%, 15%);
@@ -1237,12 +1264,12 @@ body {
   left: 0rem;
   border-radius: 0.4rem;
 }
-.banner__wrapper Video {
+.banner video {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20.8rem;
+  height: 43%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1361,7 +1388,6 @@ body {
   font-size: 2rem;
 }
 .teams__text p {
-  padding-top: 1rem;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -1376,6 +1402,7 @@ body {
   padding-top: 2rem;
 }
 .teams li p {
+  padding-top: 1rem;
   font-size: 0.8rem;
   max-width: 10rem;
   margin: 0 auto;
@@ -1396,6 +1423,9 @@ body {
   font-weight: bold;
 }
 
+.teams__head {
+  padding-top: 5rem;
+}
 .teams__head video {
   width: 100%;
   height: 100%;
@@ -1403,8 +1433,41 @@ body {
      object-fit: cover;
   position: unset;
   transform: translateX(-1.3rem);
-  border-top-right-radius: 10rem;
-  border-bottom-right-radius: 10rem;
+  border-top-right-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  height: 13.5rem;
+}
+.teams__head .teams__head__text {
+  padding: 2rem;
+  justify-content: right;
+}
+.teams__head .teams__head__text h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.teams__head .teams__head__text h3 {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.teams__head .teams__head__text p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.teams__head .teams__head__text a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(217, 89%, 61%);
+  padding-bottom: rem;
+}
+.teams__head .teams__head__text p2 {
+  padding-top: 2rem;
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  text-align: center;
 }
 
 .work {
@@ -1415,14 +1478,18 @@ body {
   display: flex;
   text-align: center;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
 }
 .work .slider__item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   background-color: hsl(0, 0%, 100%);
-  width: 22rem;
+  width: 19rem;
+  height: 27rem;
   margin: 0 auto;
   padding: 1rem;
 }
 .work .slider__item h5 {
+  padding-top: 0.8rem;
   font-size: 0.8rem;
   color: grey;
   font-weight: lighter;
@@ -1431,19 +1498,28 @@ body {
   width: 100%;
 }
 .work .slider__item h3 {
+  padding-top: 0.8rem;
   font-size: 1.4rem;
   font-weight: bold;
   padding-bottom: 2rem;
 }
-.work .slider__item a {
+.work .slider__actions {
+  display: flex;
+  padding-top: 5rem;
+}
+.work .slider__actions a {
+  font-weight: bold;
   font-size: 1rem;
   color: hsl(217, 89%, 61%);
 }
-.work .slider__item i {
-  padding-left: 10rem;
+.work .slider__actions i {
+  padding-left: 9rem;
   color: hsl(217, 89%, 61%);
 }
 .work .tns-controls, .work button[data-action=stop] {
+  display: none;
+}
+.work .tns-controls, .work button[data-action=start] {
   display: none;
 }
 .work .tns-nav {
@@ -1469,10 +1545,50 @@ body {
   background: hsl(300, 60%, 21%);
 }
 
+.bannerdown {
+  background: hsl(300, 60%, 21%);
+  border: none;
+  -webkit-clip-path: ellipse(100% 100% at center top);
+          clip-path: ellipse(100% 100% at center top);
+  height: auto;
+  min-height: 390px;
+}
+.bannerdown h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.bannertoe {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+}
+.bannertoe__info {
+  display: flex;
+}
+.bannertoe__drop {
+  padding: 0.5rem;
+}
+.bannertoe__drop span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.bannertoe__drop li {
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  max-width: 1rem;
+}
+
 @media screen and (min-width: 940px) {
   .banner {
-    height: 65vh;
+    height: auto;
     padding-top: 5rem;
+  }
+  .banner__text {
+    padding-right: 2rem;
   }
   .banner h1 {
     color: hsl(0, 0%, 100%);
@@ -1503,7 +1619,7 @@ body {
     grid-template-columns: 1fr 1fr;
   }
   .banner__wrapper video {
-    padding-left: 2rem;
+    padding-bottom: 2rem;
     position: unset;
     width: 100%;
     height: 100%;

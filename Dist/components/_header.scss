@@ -189,7 +189,7 @@
                     transition: transform 750ms ease-in-out 0s;
                     &:first-child{
                         transform: translateY(10px) rotate(225deg);
-             v           transition:.5s ease;
+                        transition:.5s ease;
                     }
                     &:nth-child(2){
                         opacity:0;

@@ -63,13 +63,13 @@
                 }
             }       
         }
-    &__text{
-        video{
+    
+    video{
         position: absolute;
         bottom: 0;
         left: 0;
-        @include imgFit(100%, 100%);
-}}
+        @include imgFit(100%, 43%);
+    }
 }  
 
 .trust{
@@ -189,7 +189,7 @@
         .cond__text{
             padding-bottom: 5rem;
         }
-
+        
 
     }
 }
@@ -206,7 +206,7 @@
             font-size: 2rem;
         }
         p{
-            padding-top: 1rem;
+            
             font-size: 1.1rem;
             font-weight: 500;
         }
@@ -221,6 +221,7 @@
         grid-template-columns: 1fr;
         padding-top: 2rem;
         p{
+            padding-top: 1rem;
             font-size: .8rem;
             max-width: 10rem;
             margin: 0 auto;
@@ -244,13 +245,50 @@
 }
 
 .teams__head{
-
+    padding-top: 5rem;
     video{
         @include imgFit(100%, 100%);
         position: unset;
         transform: translateX(-1.3rem);
-        border-top-right-radius: 10rem;
-        border-bottom-right-radius: 10rem;
+        border-top-right-radius: 20rem;
+        border-bottom-right-radius: 20rem;
+        height: 13.5rem;
+    }
+
+    .teams__head__text{
+        padding: 2rem;
+        justify-content: right;
+        h2{
+        font-style: italic;  
+        font-size: 1.5rem;
+        font-weight: 400;
+        }
+        h3{       
+        padding-top: 1rem;                         
+        font-size: 1rem;
+        font-weight: bold;                          
+        }
+        p{
+        font-size: 1rem;
+        font-weight: 400;
+        
+        }
+        a{
+        font-size: 1rem;
+        font-weight: 600;   
+        color: $clr-gblue;
+        padding-bottom: rem;
+        }
+        p2{
+        padding-top: 2rem;
+        color: grey;
+        font-size: .8rem;
+        font-weight: 600; 
+        display: flex;
+        text-align: center;
+
+        }
+
     }
 }
 
@@ -261,14 +299,18 @@
         display: flex;
         text-align: center;
         padding-bottom: 2rem;
+        font-size: 1.5rem;
     }
     .slider__item{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         background-color: $clr-light;
-        width: 22rem;
+        width: 19rem;
+        height: 27rem;
         margin: 0 auto;
         padding: 1rem;
-        //display: inline-block;
+        
         h5{
+            padding-top: .8rem;
             font-size: .8rem;
             color: grey;
             font-weight: lighter;
@@ -278,20 +320,30 @@
            width: 100%; 
         }
         h3{
+            padding-top: .8rem;
             font-size: 1.4rem;
             font-weight: bold;
             padding-bottom: 2rem;
         }
-        a{
+        
+    }
+    .slider__actions{
+        display: flex;
+        padding-top: 5rem;
+        a{  
+            font-weight: bold;
             font-size: 1rem;
             color: $clr-gblue;
         }
         i{  
-            padding-left: 10rem;
+            padding-left: 9rem;
             color: $clr-gblue;
         }
     }
     .tns-controls, button[data-action="stop"]{
+            display: none;
+        }
+        .tns-controls, button[data-action="start"]{
             display: none;
         }
     
@@ -320,14 +372,58 @@
       }
 }
 
+.bannerdown{
+    background: $clr-primary;
+    border: none;
+    clip-path: ellipse(100% 100% at center top);
+    height: auto;
+    min-height: 390px;
+    h1{
+        text-align: center;
+        font-weight: bold;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+        color: $clr-light;
+    }
+}
 
+.bannertoe{
+    background: $clr-light;
+    display:flex;
+    &__items{
+        svg{
+            
+        }
+    }
+    
+    &__info{
+        display: flex;
+    }
+    &__drop{
+        padding: .5rem;
+        span{
+            font-size: .8rem;
+            font-weight: bold;
+        }
+        li{
+            padding-top: 1.5rem;
+            font-size: .8rem;
+            font-weight: 500; 
+            max-width: 1rem;
+        }
+    }
+}
 
 
 @include mediaQuery($break-lg){
 
     .banner{
-        height:65vh;
+        height:auto;
         padding-top: 5rem;
+        
+        &__text{
+            padding-right: 2rem;
+        }
         h1{
             color: $clr-light;
             text-align: left;
@@ -355,9 +451,8 @@
         &__wrapper{
             display: grid;
             grid-template-columns: 1fr 1fr ;
-
             video{
-                padding-left: 2rem;
+                padding-bottom: 2rem;
                 position: unset;
                 @include imgFit(100%, 100%);
             }

@@ -77,6 +77,38 @@
         }
         
     }
+
+    .footer2nd{
+      &__items{
+          list-style: none;
+          margin: 0 auto;
+          padding: 0;
+          
+          ul{    
+          padding: 1rem;
+          justify-content: space-between;
+          color: $clr-dark;
+          display: flex;
+          width: 100%;
+          margin-bottom: 0;
+          }
+          a{
+              color: $clr-dark;
+          }
+      }
+      
+      &__text{
+          padding: 1rem;
+          height: auto;
+          text-align: left;
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 400;
+          line-height: 1.2857;
+          letter-spacing: normal;
+          font-size: .75rem;
+          color: #454245;
+      }
+  }
     
     @include mediaQuery($break-lg){
       .modal{
